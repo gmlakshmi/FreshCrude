@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Details</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #777;
+        }
+
+        .farmer-details {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .farmer-info {
+            width: 45%;
+        }
+
+        .farmer-info img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .farmer-info h3 {
+            font-size: 1.8rem;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        .farmer-info p {
+            font-size: 1.1rem;
+            margin-top: 10px;
+            color: #555;
+        }
+
+        .farmer-info .location {
+            font-size: 1rem;
+            margin-top: 10px;
+            color: #4CAF50;
+        }
+
+        .products {
+            width: 45%;
+        }
+
+        .products h4 {
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .product-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            margin-bottom: 15px;
+            width: 100%;
+            max-width: 200px;
+            text-align: center;
+        }
+
+        .product-card img {
+            width: 100px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .product-card h5 {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            color: #333;
+        }
+
+        .product-card p {
+            font-size: 0.9rem;
+            margin-top: 5px;
+            color: #777;
+        }
+
+        .map-section {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Farmer Details</h1>
+        <p>Learn more about Farmer ganeshan and his fresh product!</p>
+    </header>
+
+    <section class="farmer-details">
+        <!-- Farmer Info Section -->
+        <div class="farmer-info">
+            <img src="ganes.jpg">
+            <h3>ganeshan</h3>
+            <p>Farmer John specializes in organic, locally grown produce and offers a wide variety of fresh vegetables and fruits.</p>
+            <div class="location">manthithoppu,kovilpatti</div>
+            <div class="contact">mobile number:9751532579</div>
+        </div>
+
+        <!-- Products Section -->
+        <div class="products">
+            <h4>Available Products</h4>
+            <div class="product-card">
+                <img src="thakkali.jpg" alt="Tomatoes">
+                <h5>Tomatoes</h5>
+                <h3><b>1kg:$50</b></h3>
+                <p>Fresh, organic tomatoes grown without pesticides.</p>
+            </div>
+            <div class="product-card">
+                <img src="brinjal.jpg" alt="brinjal">
+                <h5>brinjal</h5>
+                <h3><b>1kg:$30</b></h3>
+                <p>Fresh, organic brinjal grown without pesticides.</p>
+            </div>
+            <div class="product-card">
+                <img src="vellari.jpg" alt="Cucumbers">
+                <h5>cucumber</h5>
+                <h3>1kg:$40</h3>
+                <p>Crunchy and refreshing cucumbers from the farm.</p>
+            </div>
+            <div class="product-card">
+                <img src="putangai.jpg" alt="snake gaurd">
+                <h5>snake gaurd</h5>
+                    <h3>1kg:$60</h3>
+                <p>Fresh, crisp snake perfect for your salads.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Map Section -->
+    <section class="map-section">
+        <h2>Farmer's Location on the Map</h2>
+        <p>Find Farmer ganeshan location on the map below:</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31511.83189205112!2d77.8446054643987!3d9.15636791579819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b06adda4f1ce7b3%3A0x8262791c53b49734!2sManthithoppu%2C%20Tamil%20Nadu%20628502!5e0!3m2!1sen!2sin!4v1737520323540!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
+    </section>
+
+</body>
+</html>

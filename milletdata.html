@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmers List</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #777;
+        }
+
+        .farmers-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            justify-items: center;
+        }
+
+        .farmer-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 100%;
+            max-width: 300px;
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+
+        .farmer-card:hover {
+            transform: scale(1.05);
+        }
+
+        .farmer-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .farmer-info {
+            padding: 15px;
+        }
+
+        .farmer-info h3 {
+            font-size: 1.6rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .farmer-info p {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .farmer-info .location {
+            font-size: 0.9rem;
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+
+        .cta-btn {
+      background-color: #28a745;
+      color: white;
+      padding: 5px 10px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1.2em;
+    }
+
+    .cta-btn:hover {
+      background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Farmers List</h1>
+        <p>Discover the best farmers in your area for fresh product</p>
+    </header>
+
+    <section class="farmers-list">
+        <div class="farmer-card">
+            <img src="ganesh.jpg" class="farmer-img">
+            <div class="farmer-info">
+                <h3>Ganesan Garden</h3>
+                <p>Specializes in organic vegetables and fruits.</p>
+                <div class="location">Location : manthithoppu</div>
+                <a href="millganesh.html" class="cta-btn">View more</a>
+            </div>
+        </div>
+
+        <div class="farmer-card">
+            <img src="bala.jpg" class="farmer-img">
+            <div class="farmer-info">
+                <h3>Alagarsamy Garden</h3>
+                <p>Grows fresh herbs and spices for culinary needs.</p>
+                <div class="location">Location : Balakrishnapuram </div>
+                <a href="millalagar.html" class="cta-btn">View more</a>
+            </div>
+        </div>
+
+        <div class="farmer-card">
+            <img src="kumar.jpg" class="farmer-img">
+            <div class="farmer-info">
+                <h3>Murugesan Garden</h3>
+                <p>Provides dairy products and farm-fresh eggs.</p>
+                <div class="location">Location : Vedanatham  </div>
+                <a href="millmurugesan.html" class="cta-btn">View more</a>
+            </div>
+        </div>
+
+        
+       
+    </section>
+    <div style="text-align: center; margin-top: 30px;">
+        <a href="javascript:history.back()" class="cta-btn">Back</a>
+    </div>
+
+</body>
+</html>

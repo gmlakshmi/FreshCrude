@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitor Counter</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* Header Section */
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 36px;
+        }
+
+        /* Visitor Counter */
+        .visitor-counter {
+            margin-top: 40px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .visitor-counter span {
+            font-weight: bold;
+            color: #4CAF50;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 40px;
+            font-size: 16px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Header Section -->
+        <header>
+            <h1>Welcome to the Farmer Consumer Website</h1>
+            <p>Your trusted platform for connecting farmers and consumers</p>
+        </header>
+
+        <!-- Visitor Counter Section -->
+        <div class="visitor-counter">
+            <p>Visitors to Our Website: <span id="visitorCount">0</span></p>
+        </div>
+
+        <!-- Footer Section -->
+        <footer>
+            <p>Thank you for visiting!</p>
+        </footer>
+
+    </div>
+
+    <script>
+        // Simulate tracking the number of visitors using localStorage
+
+        // Check if the 'visitCount' exists in localStorage
+        if (!localStorage.getItem('visitCount')) {
+            // If not, initialize the counter to 1 (for the first visit)
+            localStorage.setItem('visitCount', '1');
+        } else {
+            // If it exists, increment the counter by 1
+            let currentCount = parseInt(localStorage.getItem('visitCount'));
+            currentCount += 1;
+            localStorage.setItem('visitCount', currentCount.toString());
+        }
+
+        // Display the current visit count
+        document.getElementById('visitorCount').textContent = localStorage.getItem('visitCount');
+    </script>
+
+</body>
+</html>

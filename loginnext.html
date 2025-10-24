@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload Product</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+    .container {
+      width: 50%;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .form-container {
+      margin-bottom: 20px;
+    }
+    input[type="text"], input[type="file"], textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Upload Your Product</h1>
+  </header>
+
+  <div class="container">
+    <h2>Upload Product Details</h2>
+    <form id="uploadForm" action="/upload-product" method="POST" enctype="multipart/form-data">
+      <div class="form-container">
+        <label for="productName">Product Name:</label>
+        <input type="text" id="productName" name="productName" required>
+      </div>
+      <div class="form-container">
+        <label for="productDescription">Product Description:</label>
+        <textarea id="productDescription" name="productDescription" required></textarea>
+      </div>
+      <div class="form-container">
+        <label for="productPrice">Price ($):</label>
+        <input type="text" id="productPrice" name="productPrice" required>
+      </div>
+      <div class="form-container">
+        <label for="productImage">Product Image:</label>
+        <input type="file" id="productImage" name="productImage" accept="image/*" required>
+      </div>
+      <button type="submit">Upload Product</button>
+    </form>
+
+    <div id="message"></div>
+  </div>
+
+  <script>
+    document.getElementById("uploadForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      // Form data collection
+      let formData = new FormData(event.target);
+
+      // Send the form data to the backend
+      fetch("/upload-product", {
+        method: "POST",
+        body: formData
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          document.getElementById("message").innerHTML = `<p>Product uploaded successfully!</p>`;
+        } else {
+          document.getElementById("message").innerHTML = `<p>Error uploading product. Please try again.</p>`;
+        }
+      })
+      .catch(error => {
+        document.getElementById("message").innerHTML = `<p>Error: ${error.message}</p>`;
+      });
+    });
+  </script>
+
+</body>
+</html>

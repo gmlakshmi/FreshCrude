@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rating for Farmer Consumer Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+        .rating {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .star {
+            font-size: 30px;
+            color: #ccc;
+            cursor: pointer;
+        }
+        .star:hover,
+        .star.selected {
+            color: #ff9900;
+        }
+        .feedback {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            resize: vertical;
+        }
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100%;
+        }
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+
+        /* Modal Styling */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #fff;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 400px;
+            border-radius: 8px;
+        }
+        .modal-header {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .modal-body {
+            margin-top: 10px;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Rate Our Website</h1>
+
+<!-- Display number of visits -->
+<div id="visitCount" style="font-size: 18px; margin-bottom: 20px;">
+    Number of visitors: <span id="visitorCount">0</span>
+</div>
+
+<form id="ratingForm">
+    <div class="rating">
+        <span class="star" data-value="1">&#9733;</span>
+        <span class="star" data-value="2">&#9733;</span>
+        <span class="star" data-value="3">&#9733;</span>
+        <span class="star" data-value="4">&#9733;</span>
+        <span class="star" data-value="5">&#9733;</span>
+    </div>
+    
+    <textarea class="feedback" placeholder="Write your feedback here..." rows="4" id="feedback"></textarea>
+    
+    <button type="submit" class="submit-btn">Submit Rating</button>
+</form>
+
+<!-- Custom Modal -->
+<div id="feedbackModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-header">Thank You for Your Feedback!</div>
+        <div class="modal-body" id="modalMessage">
+            <!-- Feedback message will appear here -->
+        </div>
+    </div>
+</div>
+
+<script>
+    // Track the number of visitors using localStorage
+    if (!localStorage.getItem('visitCount')) {
+        localStorage.setItem('visitCount', 0);
+    }
+    
+    // Increase the visit count by 1 on each page load
+    let visitCount = parseInt(localStorage.getItem('visitCount')) + 1;
+    localStorage.setItem('visitCount', visitCount);
+
+    // Update the visit count on the page
+    document.getElementById('visitorCount').textContent = visitCount;
+
+    const stars = document.querySelectorAll('.star');
+    let selectedRating = 0;
+
+    stars.forEach(star => {
+        star.addEventListener('click', function() {
+            selectedRating = parseInt(star.getAttribute('data-value'));
+            updateStarSelection();
+        });
+    });
+
+    function updateStarSelection() {
+        stars.forEach(star => {
+            if (parseInt(star.getAttribute('data-value')) <= selectedRating) {
+                star.classList.add('selected');
+            } else {
+                star.classList.remove('selected');
+            }
+        });
+    }
+
+    // Modal Elements
+    const modal = document.getElementById('feedbackModal');
+    const modalMessage = document.getElementById('modalMessage');
+    const closeModal = document.getElementsByClassName('close')[0];
+
+    // Open Modal
+    function openModal(message) {
+        modal.style.display = "block";
+        modalMessage.textContent = message;
+    }
+
+    // Close Modal
+    closeModal.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    document.getElementById('ratingForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const feedbackText = document.getElementById('feedback').value.trim();
+        
+        if (selectedRating === 0 || feedbackText === "") {
+            openModal("Please provide a rating and feedback.");
+        } else {
+            const message = `Thank you for your feedback!\nRating: ${selectedRating} stars\nFeedback: ${feedbackText}`;
+            openModal(message);
+        }
+    });
+</script>
+
+</body>
+</html>

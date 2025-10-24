@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+  
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: green;
+            padding: 15px 15px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            font-size: 1.8em;
+                    }
+
+        header nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        header nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+    
+
+        /* Categories Section */
+        .categories {
+            display: flex;
+            justify-content: space-around;
+            margin: 30px 0;
+        }
+
+        .category {
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .category:hover {
+            transform: scale(1.05);
+        }
+
+        .category img {
+            width: 200px;
+            height: 200px;
+            margin-bottom: 10px;
+        }
+
+        .category h3 {
+            font-size: 18px;
+            color: #333;
+        }
+
+        /* Restaurant Cards */
+        .restaurant-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+
+        .restaurant-card {
+            background-color: white;
+            width: 250px;
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .restaurant-card:hover {
+            transform: scale(1.05);
+        }
+
+        .restaurant-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .restaurant-card .info {
+            padding: 15px;
+        }
+
+        .restaurant-card .info h4 {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .restaurant-card .info p {
+            font-size: 14px;
+            color: #777;
+        }
+
+        .restaurant-card .info .rating {
+            font-weight: bold;
+            color: #ff5722;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header Section -->
+<header>
+    <div class="logo">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fresh Crude&nbsp;&nbsp;&nbsp;&nbsp;</div>
+
+</header>
+
+
+<!-- Categories Section -->
+<div class="categories">
+    <div class="category">
+        <img src="veg.jpg" ></img>
+        <a href="veg.html"><br>vegetables</a>
+    </div>
+    <div class="category">
+        <img src="fruit.jpg"></img>
+        <a href="fruit.html"><br>fruit<br></a>
+
+    </div>
+    <div class="category">
+        <img src="oil.jpg"></img>
+        <a href="oils.html"><br>Oils<br></a>
+        
+    </div>
+    <div class="category">
+        <img src="seed.jpg"></img>
+        <a href="seeds.html"><br>Seeds<br></a>
+     
+    </div>
+</div>
+
+
+
+
+ 
+
+   
+</script>
+
+</body>
+</html>

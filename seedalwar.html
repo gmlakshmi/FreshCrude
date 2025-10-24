@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Profile Page</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* Header Section */
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 30px 0;
+        }
+
+        header h1 {
+            font-size: 40px;
+            color:white
+        }
+
+        /* Farmer Info Section */
+        .farmer-info {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+
+        .farmer-info img {
+            width: 200px;
+      height: 200px;
+      border-radius: 50%; /* Makes the image circular */
+      object-fit: cover; /* Ensures the image covers the container without distortion */
+      
+        }
+
+        .farmer-info div {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .farmer-info h2 {
+            font-size: 30px;
+            color: #333;
+        }
+
+        .farmer-info p {
+            font-size: 18px;
+            color: #555;
+            margin-top: 15px;
+        }
+
+        /* Product Display Section */
+        .products-section {
+            margin-top: 60px;
+        }
+
+        .products-section h3 {
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .product-card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .product-card h4 {
+            font-size: 20px;
+            color: #333;
+            margin-top: 15px;
+        }
+
+        .product-card p {
+            font-size: 16px;
+            color: #777;
+            margin-top: 10px;
+        }
+
+        /* Location Section */
+        .location-section {
+            margin-top: 60px;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .location-section h3 {
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .location-map {
+            width: 100%;
+            height: 400px;
+            border: none;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Header Section -->
+        <header>
+            <h1>Alwarsamy Profile Page</h1>
+            <h3>Contact : 9786531922</h3>
+        </header>
+
+        <!-- Farmer Info Section -->
+        <section class="farmer-info">
+            <img src="non.jpg" >
+            <div>
+                <h2>Alwarsamy</h2>
+                <p>He is a passionate farmer who grows organic fruits and vegetables. He believes in sustainable farming and offers fresh produce directly to consumers. His farm is located in the heart of the countryside, where he grows a variety of seasonal crops.</p>
+            </div>
+        </section>
+
+        <!-- Product Display Section -->
+        <section class="products-section">
+            <h3>Our Products</h3>
+
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <img src="brinjal seed.jpg" alt="Product Image">
+                    <h4>Brinjal Seed</h4>
+                    
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <img src="corn seed.jpg" alt="Product Image">
+                    <h4>Corn Seed</h4>
+                    
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <img src="chilli seed.jpg" alt="Product Image">
+                    <h4>Chilli Seed</h4>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Location Section -->
+        <section class="location-section">
+            <h3>Our Location</h3>
+            <p>We are located in the heart of the countryside, providing fresh produce straight from the farm to your table.</p>
+            <!-- Embed Google Map (Replace with your own location) -->
+            <iframe class="location-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15755.915926604663!2d77.85492697971026!3d9.156368353953733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b06adda4f1ce7b3%3A0x8262791c53b49734!2sManthithoppu%2C%20Tamil%20Nadu%20628502!5e0!3m2!1sen!2sin!4v1740407789108!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+
+    </div>
+
+</body>
+</html>

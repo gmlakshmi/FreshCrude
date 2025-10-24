@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ & Image Slider - Equal Size</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            width: 80%;
+            max-width: 1000px;
+            height: 500px; /* Ensuring equal height */
+            gap: 10px;
+        }
+
+        .faq-container, .slider {
+            flex: 1; /* Ensures both sections take equal width */
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* FAQ Section */
+        .faq-list {
+            width: 100%;
+            max-height: 350px; /* Control scrolling */
+            overflow-y: auto;
+        }
+
+        .faq-item {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            font-weight: 600;
+            padding: 12px;
+            color: #2d6a4f;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 10px;
+            font-size: 16px;
+            color: #444;
+        }
+
+        .faq-answer.show {
+            display: block;
+        }
+
+        #showMoreBtn {
+            background-color: #2d6a4f;
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+            border-radius: 8px;
+        }
+
+        /* Image Slider */
+        .slider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            background-image: url('1.png');
+        }
+
+        .slider img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            opacity: 0;
+            animation: rotateImages 9s infinite;
+        }
+
+        .slider img:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .slider img:nth-child(2) {
+            animation-delay: 3s;
+        }
+
+        .slider img:nth-child(3) {
+            animation-delay: 6s;
+        }
+
+        @keyframes rotateImages {
+            0% { opacity: 0; transform: rotateX(90deg); }
+            10% { opacity: 1; transform: rotateX(0deg); }
+            30% { opacity: 1; }
+            40% { opacity: 0; transform: rotateX(-90deg); }
+            100% { opacity: 0; }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- FAQ Section -->
+        <div class="faq-container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">How can I buy fresh produce? <span>+</span></button>
+                    <div class="faq-answer"><p>Visit our Freshcrude Websites: <a href="#products">Shop</a></p></div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">How to register as a farmer? <span>+</span></button>
+                    <div class="faq-answer"><p>Contact Admin, Register here: <a href="#contact">Farmer Registration</a></p></div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">Do you offer delivery services? <span>+</span></button>
+                    <div class="faq-answer"><p>NO,We provide only Straight-from-source buying<a href="#Contact">More Details </a></p></div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">Can I contact farmers directly? <span>+</span></button>
+                    <div class="faq-answer"><p>Yes, you cand find Farmers contact<a href="#contact">Farmers</a></p></div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">What payment methods are accepted? <span>+</span></button>
+                    <div class="faq-answer"><p>We accept UPI, Cards,Hand-to-hand payment: <a href="#contact">Payment Options</a></p></div>
+                </div>
+
+                <div class="faq-item extra-faq" style="display: none;">
+                    <button class="faq-question">How long does produce items take? <span>+</span></button>
+                    <div class="faq-answer"><p>Usually 2-5 days.</p></div>
+                </div>
+
+                <div class="faq-item extra-faq" style="display: none;">
+                    <button class="faq-question">Is there a return policy? <span>+</span></button>
+                    <div class="faq-answer"><p>Check our <a href="#contact"></a></p></div>
+                </div>
+            </div>
+
+            <button id="showMoreBtn">Show More</button>
+        </div>
+
+        <!-- Image Slider -->
+        <div class="slider">
+            <img src="thott.jpg" alt="Image 1">
+            <img src="thot1 (1).jpg" alt="Image 2">
+            <img src="thottt.jpg" alt="Image 3">
+        </div>
+    </div>
+
+    <script>
+        // FAQ Toggle
+        document.querySelectorAll(".faq-question").forEach(button => {
+            button.addEventListener("click", function () {
+                const answer = this.nextElementSibling;
+                answer.classList.toggle("show");
+                this.querySelector("span").textContent = answer.classList.contains("show") ? "-" : "+";
+            });
+        });
+
+        // Show More/Show Less Questions
+        document.getElementById("showMoreBtn").addEventListener("click", function () {
+            const extraFaqs = document.querySelectorAll(".extra-faq");
+            let isHidden = extraFaqs[0].style.display === "none";
+
+            extraFaqs.forEach(faq => {
+                faq.style.display = isHidden ? "block" : "none";
+            });
+
+            this.textContent = isHidden ? "Show Less" : "Show More";
+        });
+    </script>
+
+</body>
+</html>

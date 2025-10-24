@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Consumer Website</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            background-image: url('bgfront1.jpg');
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Main container */
+        .container {
+            text-align: center;
+            background-color:transparent;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header styling */
+        header h1 {
+            font-size: 32px;
+            color: #017a16;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        /* Button styling */
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+           
+            
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+           
+        }
+
+        /* Login button */
+        .login-btn {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .login-btn:hover {
+            background-color: #45a049;
+        }
+
+        /* Sign up button */
+        .signup-btn {
+            background-color: #008CBA;
+            color: white;
+        }
+
+        .signup-btn:hover {
+            background-color: #007b8f;
+        }
+        
+        /* Visitor Counter */
+        .visitor-counter {
+            margin-top: 40px;
+            font-size: 24px;
+            color: #221f1f;
+            font-weight: bold;
+        }
+
+        .visitor-counter span {
+            font-weight: bold;
+            color: #075209;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Welcome to Farmer-Consumer Connection</h1>
+            <p>Connecting Farmers with Consumers for Fresh Products</p>
+        </header>
+
+        <div class="buttons">
+           
+            <button class="login-btn" onclick="window.location.href='login.html'">Login</button>
+            <button class="signup-btn" onclick="window.location.href='signup.html'">Sign Up</button>
+        
+        </div>
+         <!-- Visitor Counter Section -->
+         <div class="visitor-counter">
+            <p>Visitors to Our Website: <span id="visitorCount">0</span></p>
+        </div>
+        <script>
+            // Simulate tracking the number of visitors using localStorage
+    
+            // Check if the 'visitCount' exists in localStorage
+            if (!localStorage.getItem('visitCount')) {
+                // If not, initialize the counter to 1 (for the first visit)
+                localStorage.setItem('visitCount', '1');
+            } else {
+                // If it exists, increment the counter by 1
+                let currentCount = parseInt(localStorage.getItem('visitCount'));
+                currentCount += 1;
+                localStorage.setItem('visitCount', currentCount.toString());
+            }
+    
+            // Display the current visit count
+            document.getElementById('visitorCount').textContent = localStorage.getItem('visitCount');
+        </script>
+    </div>
+
+</body>
+</html>

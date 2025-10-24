@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farm Fresh crude Products</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Navbar Styles */
+    header {
+      background-color: #28a745;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      color: white;
+      font-size: 3.5em;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+      font-size: 1.1em;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url('https://via.placeholder.com/1500x600') no-repeat center center/cover;
+      color: rgb(255, 255, 255);
+      padding: 100px 0;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+
+    .cta-btn {
+      background-color: #28a745;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1.2em;
+    }
+
+    .cta-btn:hover {
+      background-color: #218838;
+    }
+
+    /* About Us Section */
+    .about-us {
+      background-color: #fff;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .about-us h2 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    .about-us p {
+      font-size: 1.2em;
+      width: 60%;
+      margin: 0 auto;
+    }
+
+    /* Product Gallery Section */
+    .product-gallery {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .product-gallery h2 {
+      font-size: 2.5em;
+      margin-bottom: 30px;
+    }
+
+    .products-container {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .product-card {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      padding: 20px;
+      width: 300px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-card img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .product-card h3 {
+      font-size: 1.5em;
+      margin: 15px 0;
+    }
+
+    .product-card p {
+      font-size: 1.1em;
+    }
+
+    /* Contact Section */
+    .contact {
+      background-color: #f0f0f0;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    .contact p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+
+    .contact form {
+      display: grid;
+      gap: 15px;
+      justify-content: center;
+      width: 50%;
+      margin: 0 auto;
+    }
+
+    .contact form input,
+    .contact form textarea {
+      padding: 15px;
+      border: 1px solid #ccc;
+      width: 100%;
+      font-size: 1.1em;
+    }
+
+    .contact form button {
+      padding: 15px;
+      border: none;
+      background-color: #28a745;
+      color: white;
+      font-size: 1.2em;
+      cursor: pointer;
+    }
+
+    .contact form button:hover {
+      background-color: #218838;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #28a745;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Fresh crude Products</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="hero-content">
+        <img src="farmer.jpg" width="300px" height="250px">
+        <p style="color:grey;" >Discover the best natural products grown with care and love.</p>
+      <a href="#products" class="cta-btn">view Now</a>
+    </div>
+  </section>
+
+  <section id="about" class="about-us">
+    <h2>About Us</h2>
+    <p>We are passionate farmers who provide fresh, organic, and natural products directly from our farm to you. Our products are grown with sustainable practices, ensuring you get the best quality while helping the environment.</p>
+  </section>
+
+  <section id="products" class="product-gallery">
+    <h2>Our Products</h2>
+    <div class="products-container">
+      <div class="product-card">
+        <img src="keerai.jpg" >
+        <h3>Organic lettuce</h3>
+        <p>Freshly harvested lettuce grown with natural fertilizers.</p><br>
+        <a href="keerai.html" class="cta-btn">view Now</a>
+      </div>
+      <div class="product-card">
+        <img src="egg.jpg" alt="Farm Fresh Eggs">
+        <h3>Farm Fresh Eggs</h3>
+        <p>Our chickens lay free-range, farm-fresh eggs every day.</p><br>
+        <a href="egg.html" class="cta-btn">view Now</a>
+      </div>
+      <div class="product-card">
+        <img src="honey.jpg" alt="Pure Honey">
+        <h3>Pure Honey</h3>
+        <p>Raw, unfiltered honey directly from our hives.</p><br>
+        <a href="honey.html" class="cta-btn">view Now</a>
+      </div>
+      <div class="product-card">
+        <img src="veg.jpg" alt="Pure Honey">
+        <h3>Fresh vegetables</h3>
+        <p>Raw, unfiltered honey directly from our hives.</p><br>
+        <a href="veg.html" class="cta-btn">view Now</a>
+    </div></div>
+
+
+    <div class="products-container">
+      <div class="product-card">
+        <img src="fruit.jpg" >
+        <h3>Raw fruits</h3>
+        <p>Freshly harvested fruits grown with natural fertilizers.</p><br>
+        <a href="keerai.html" class="cta-btn">view Now</a>
+      </div>
+      <div class="product-card">
+        <img src="seed.jpg" alt="Farm Fresh Eggs">
+        <h3>Seeds</h3>
+        <p>Seeds protect and nourish the embryo.</p><br>
+        <a href="egg.html" class="cta-btn">view Now</a>
+      </div>
+      <div class="product-card">
+        <img src="oil.jpg" alt="Pure Honey">
+        <h3>Pure Oils</h3>
+        <p>Nature’s Pure Essence Oil”</p><br>
+        <a href="honey.html" class="cta-btn">view Now</a>
+      </div>
+      <div class="product-card">
+        <img src="seedling.jfif" alt="Pure Honey">
+        <h3>Seedling And Sapling</h3>
+        <p>Raw, unfiltered honey directly from our hives.</p><br>
+        <a href="veg.html" class="cta-btn">view Now</a>
+    </div></div>
+    
+    
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>If you have any questions or would like to buy any product , feel free to reach out!</p>
+    <h3 style="color:#888121">Admin:</h3> <h3 style="color:#0c5e13">Muthulakshmi.G</h3>
+    <h3 style="color:#788821">contact:</h3> <h3 style="color:#19660a">7639155195</h3>
+    <h3 style="color:#218838"> E-mail: gmlakshmi2004@gmail.com</h3>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Farm Fresh Products | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>

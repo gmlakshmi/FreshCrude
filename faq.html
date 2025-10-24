@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Farmer Consumer Website</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .faq-container {
+            max-width: 700px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        h2 {
+            text-align: center;
+            color: #2d6a4f;
+            font-size: 26px;
+            margin-bottom: 20px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .faq-item {
+            background: #fff;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            padding: 10px;
+            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-weight: 600;
+            padding: 14px;
+            color: #2d6a4f;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .faq-question:hover {
+            color: #40916c;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            padding: 0 14px;
+            color: #444;
+            font-size: 16px;
+            opacity: 0;
+            transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out, padding 0.3s ease-in-out;
+        }
+
+        .faq-answer.show {
+            max-height: 200px;
+            opacity: 1;
+            padding: 14px;
+        }
+
+        .faq-icon {
+            font-size: 22px;
+            color: #2d6a4f;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .rotate {
+            transform: rotate(180deg);
+        }
+
+        .show-more-btn {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background: #2d6a4f;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+
+        .show-more-btn:hover {
+            background: #40916c;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="faq-container">
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-list">
+            <div class="faq-item">
+                <button class="faq-question">How can I buy fresh produce from farmers? <span class="faq-icon">+</span></button>
+                <div class="faq-answer"><p>You can browse and order fresh produce from our farmers here: <a href="#">Visit Shop</a></p></div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">How can I register as a farmer? <span class="faq-icon">+</span></button>
+                <div class="faq-answer"><p>Register here: <a href="#">Farmer Registration</a></p></div>
+            </div>
+            
+            <div id="more-questions" class="hidden">
+                <div class="faq-item">
+                    <button class="faq-question">Do you offer delivery services? <span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><p>Yes, we provide delivery services. <a href="#">Learn More</a></p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">What payment methods are accepted? <span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><p>We accept various payment options. <a href="#">More Details</a></p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Cr? <span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><p>Yes, order tracking an I track my ordeis available. <a href="#">Track Order</a></p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Are there any discounts available? <span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><p>Check our offers section for discounts. <a href="#">View Offers</a></p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">How do I contact customer support? <span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><p>Contact us through our support page. <a href="#">Support</a></p></div>
+                </div>  
+                <div class="faq-item">
+                    <button class="faq-question">Do farmers offer organic certification?<span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><p>Some farmers have organic certifications. <a href="#">Support</a></p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Are there seasonal products available?<span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><p>Yes, we offer seasonal products based on availability. 
+                        Check our seasonal produce section for current offerings. <a href="#">Support</a></p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Do you offer bulk purchasing options?<span class="faq-icon">+</span></button>
+                <div class="faq-answer"><p>Yes, we offer bulk purchasing for businesses and large orders.
+                     You can contact farmers directly or use our bulk order request feature.<a href="#">support</a></p></div>
+                </div>
+
+            </div>
+        </div>
+
+        <button id="toggle-btn" class="show-more-btn">Show More Questions</button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const questions = document.querySelectorAll(".faq-question");
+            const toggleBtn = document.getElementById("toggle-btn");
+            const moreQuestions = document.getElementById("more-questions");
+
+            questions.forEach(question => {
+                question.addEventListener("click", function () {
+                    const answer = this.nextElementSibling;
+                    const icon = this.querySelector(".faq-icon");
+                    answer.classList.toggle("show");
+                    icon.textContent = answer.classList.contains("show") ? "-" : "+";
+                    icon.classList.toggle("rotate");
+                });
+            });
+
+            toggleBtn.addEventListener("click", function () {
+                moreQuestions.classList.toggle("hidden");
+                this.textContent = moreQuestions.classList.contains("hidden") ? "Show More Questions" : "Show Less Questions";
+            });
+        });
+    </script>
+
+</body>
+</html>

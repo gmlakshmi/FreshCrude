@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farmer's Market</title>
+  <style>
+    /* Basic CSS Styling */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #333;
+    }
+
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    nav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    section {
+      display: flex;
+      justify-content: space-between;
+      margin: 20px;
+    }
+
+    .farmer-info, .product-info {
+      width: 45%;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .farmer-info img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .farmer-info h2, .product-info h2 {
+      color: #4CAF50;
+    }
+
+    .product-info ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .product-info li {
+      margin-bottom: 10px;
+      padding: 8px;
+      background-color: #f9f9f9;
+      border-radius: 5px;
+    }
+
+    .contact-form {
+      margin-top: 30px;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .contact-form button {
+      padding: 10px 15px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .contact-form button:hover {
+      background-color: #45a049;
+    }
+
+    
+
+    .farmer-info .location {
+            font-size: 1rem;
+            margin-top: 10px;
+            color: #4CAF50;
+    }
+
+    /* Google Maps Container */
+    .map-section {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+            border-radius: 10px;
+        }
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <h1>Farmer's Detail</h1>
+    <p>Fresh Products Directly from the Farm to Your Table</p>
+  </header>
+
+
+  <!-- Main Content Section -->
+  <section>
+    <!-- Farmer Info Section -->
+    <div class="farmer-info" id="about">
+      <h2>About the Farmer</h2>
+      <img src="alwar.jpg">
+      <p>We are a family-owned farm committed to providing the freshest and healthiest produce. Located in the heart of the countryside, we grow a wide variety of fruits and vegetables with love and care.</p>
+    </div>
+
+    <!-- Product Info Section -->
+    <div class="product-info" id="products">
+      <h2>Our Products</h2>
+      <ul>
+        <li><img src="carrot.jpg">Fresh Organic Tomatoes</img></li>
+        <li>Sweet and Juicy Apples</li>
+        <li>Handpicked Carrots</li>
+        <li>Farm-Fresh Eggs</li>
+        <li>Organic Lettuce</li>
+      </ul>
+    </div>
+  </section>
+
+ 
+  <section class="map-section">
+    <h2>Farmer's Location on the Map</h2>
+    <p>Find Farmer ganeshan location on the map below:</p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31511.83189205112!2d77.8446054643987!3d9.15636791579819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b06adda4f1ce7b3%3A0x8262791c53b49734!2sManthithoppu%2C%20Tamil%20Nadu%20628502!5e0!3m2!1sen!2sin!4v1737520323540!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
+</section>

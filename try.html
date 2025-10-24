@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Consumer Website</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* Header Section */
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            font-size: 36px;
+        }
+
+        /* Buttons */
+        .btn {
+            padding: 15px 30px;
+            font-size: 16px;
+            margin: 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn-login {
+            background-color: #008CBA;
+            color: white;
+        }
+
+        .btn-signup {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .btn:hover {
+            opacity: 0.8;
+        }
+
+        /* Visitor Counter Section */
+        .visitor-counter {
+            margin-top: 40px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .visitor-counter span {
+            font-weight: bold;
+            color: #4CAF50;
+        }
+
+        /* Info Section */
+        .info-section {
+            margin-top: 50px;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-section h2 {
+            font-size: 28px;
+            color: #333;
+        }
+
+        .info-section p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+            margin-top: 20px;
+        }
+
+        /* Footer Section */
+        footer {
+            margin-top: 50px;
+            font-size: 16px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Header Section -->
+        <header>
+            <h1>Welcome to the Farmer Consumer Website</h1>
+            <p>Your trusted platform for connecting farmers and consumers</p>
+        </header>
+
+        <!-- Login & Sign Up Buttons -->
+        <div>
+            <button class="btn btn-login" onclick="window.location.href='login.html'">Login</button>
+            <button class="btn btn-signup" onclick="window.location.href='signup.html'">Sign Up</button>
+        </div>
+
+        <!-- Visitor Counter Section -->
+        <div class="visitor-counter">
+            <p>Visitors to Our Website: <span id="visitorCount">0</span></p>
+        </div>
+
+        <!-- Info Section About Farmers -->
+        <div class="info-section">
+            <h2>Importance of Farmers</h2>
+            <p>
+                Farmers play a crucial role in our society by providing food, raw materials, and contributing to the economy. 
+                Without farmers, the world would not have the necessary resources to sustain a growing population. 
+                They ensure that the food we eat, the clothes we wear, and many other products we use daily are made available to us. 
+                Farmers are the backbone of the agricultural industry and their work supports not only their families but also entire communities and nations.
+            </p>
+            <p>
+                Sustainable farming practices and agricultural innovation are key to solving many of the challenges we face today, such as climate change, food security, and rural development.
+            </p>
+        </div>
+
+        <!-- Footer Section -->
+        <footer>
+            <p>Thank you for visiting!</p>
+        </footer>
+
+    </div>
+
+    <script>
+        // Simulate tracking the number of visitors using localStorage
+
+        // Check if the 'visitCount' exists in localStorage
+        if (!localStorage.getItem('visitCount')) {
+            // If not, initialize the counter to 1 (for the first visit)
+            localStorage.setItem('visitCount', '1');
+        } else {
+            // If it exists, increment the counter by 1
+            let currentCount = parseInt(localStorage.getItem('visitCount'));
+            currentCount += 1;
+            localStorage.setItem('visitCount', currentCount.toString());
+        }
+
+        // Display the current visit count
+        document.getElementById('visitorCount').textContent = localStorage.getItem('visitCount');
+    </script>
+
+</body>
+</html>

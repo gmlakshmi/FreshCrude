@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics Counter</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .stats-section {
+            background-color: #5faa4b; /* Green background */
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+        }
+
+        .stat-box {
+            text-align: center;
+        }
+
+        .number {
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        .label {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="stats-section">
+        <div class="stat-box">
+            <div class="number" data-target="3241">0</div>
+            <div class="label">Active Users</div>
+        </div>
+        <div class="stat-box">
+            <div class="number" data-target="138">0</div>
+            <div class="label">Farmer Brands</div>
+        </div>
+        <div class="stat-box">
+            <div class="number" data-target="2740">0</div>
+            <div class="label">Total Products</div>
+        </div>
+    </div>
+
+    <script>
+        function animateCounters() {
+            const counters = document.querySelectorAll('.number');
+            const speed = 100; // Adjust speed for animation
+
+            counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText.replace("+", "");
+                    const increment = target / speed;
+
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + increment) + "+";
+                        setTimeout(updateCount, 20);
+                    } else {
+                        counter.innerText = target + "+";
+                    }
+                };
+
+                updateCount();
+            });
+        }
+
+        window.onload = animateCounters;
+    </script>
+
+</body>
+</html>

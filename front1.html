@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farm Fresh crude Products</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    *{ margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+         font-family: Arial, sans-serif;
+          background-color:white;
+           color: #333;
+          }
+        header {
+         background-color: white; 
+         padding: 10px 0; 
+         text-align: center; 
+         }
+        header h1 {
+         color: white; 
+         font-size: 3.5em;
+          }
+        nav ul {
+         list-style: none;
+          padding: 0;
+           }
+        nav ul li {
+         display: inline;
+          margin: 0 15px; 
+          }
+        nav ul li a { text-decoration: none; color: white; font-size: 1.1em; }
+        .slider-container { width: 100%; overflow: hidden; position: relative; }
+        .slider { display: flex; transition: transform 1s ease-in-out; }
+        .slider img { width: 100%; height: 500px; flex-shrink: 0; }
+        
+
+        
+      
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color:white;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Navbar Styles */
+    header {
+      background-color: #28a745;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      color: white;
+      font-size: 3.5em;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1em;
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+  transform: scale(1.2);
+}
+
+    /* Hero Section */
+    .hero {
+     background-color: white;
+      color: rgb(255, 255, 255);
+      padding: 100px 0;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 3em;
+      margin-bottom: 20px;
+      color: #0c5e13;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+   
+    .cta-btn {
+      background-color: #28a745;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1.2em;
+    }
+
+    .cta-btn:hover {
+      background-color: #218838;
+    }
+
+    /* About Us Section */
+    
+    .container {
+            display: flex;
+            max-width: 1000px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            
+            
+            
+        }
+        
+        .image-section {
+            flex: 1;
+            
+            
+        }
+        .image-section img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            
+            
+          
+        }
+        .text-section {
+            flex: 1;
+            padding: 20px;
+        }
+        .text-section h2 {
+            color: #388E3C;
+        }
+        .text-section p {
+            color: #333;
+            line-height: 1.6;
+        }
+
+    /* Product Gallery Section */
+    .product-gallery {
+      padding: 50px 20px;
+      text-align: center;
+      background-color: white;
+    }
+
+    .product-gallery h2 {
+      font-size: 2.5em;
+      margin-bottom: 30px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      text-align: center;
+    }
+    nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 1.1em;
+    }
+    .product-gallery {
+      padding: 50px 20px;
+      text-align: center;
+    }
+    .product-gallery h2 {
+      font-size: 2.5em;
+      margin-bottom: 30px;
+    }
+    .products-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+  
+    }
+    .product-card {
+      background-color:white;
+      border: 1px solid #ddd;
+      padding: 20px;
+      width: 300px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+    }
+    .product-card:hover {
+      transform: scale(1.1);
+    }
+    .product-card img {
+      max-width: 100%;
+      height: auto;
+      transition: transform 0.3s ease-in-out;
+    }
+    .product-card img:hover {
+      transform: scale(1.2);
+    }
+
+    /* Contact Section */
+    .contact {
+      background-color:white;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    .contact p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+
+    .contact form {
+      display: grid;
+      gap: 15px;
+      justify-content: center;
+      width: 50%;
+      margin: 0 auto;
+    }
+
+    .contact form input,
+    .contact form textarea {
+      padding: 15px;
+      border: 1px solid #ccc;
+      width: 100%;
+      font-size: 1.1em;
+    }
+
+    .contact form button {
+      padding: 15px;
+      border: none;
+      background-color:white;
+      color: white;
+      font-size: 1.2em;
+      cursor: pointer;
+    }
+
+    .contact form button:hover {
+      background-color: #218838;
+    }
+
+ 
+/*how its work*/
+       
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .how-it-works {
+            padding: 50px 20px;
+        }
+
+        h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #2d6a4f;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+            
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            width: 320px;
+            position: relative;
+            transition: all 0.3s ease-in-out;
+            overflow: hidden;
+            text-align: left;
+            border-color: rgba(44, 207, 11, 0.808);
+            border-width: 5px;
+            border-style: dashed
+          
+   
+            
+
+        }
+
+        .card .image-container {
+            width: 100%;
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 15px;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .card-content {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .card:hover .image-container {
+            opacity: 0;
+        }
+
+        .card:hover .card-content {
+            opacity: 1;
+        }
+
+        /*faq*/
+        .container {
+            display: flex;
+            max-width: 1400px;
+            width: 100%;
+            gap: 20px;
+        }
+
+        .faq-container, .image-containers {
+            flex: 1;
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #2d6a4f;
+            font-size: 26px;
+            margin-bottom: 20px;
+        }
+
+        .faq-item {
+            background: #fff;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            padding: 10px;
+            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-weight: 600;
+            padding: 14px;
+            color: #2d6a4f;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            padding: 0 14px;
+            color: #444;
+            font-size: 16px;
+            opacity: 0;
+            transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        }
+
+        .faq-answer.show {
+            max-height: 200px;
+            opacity: 1;
+            padding: 14px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .show-more-btn {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background: #2d6a4f;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+
+        .show-more-btn:hover {
+            background: #40916c;
+        }
+
+        .image-containers{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            height: 400px;
+        }
+
+        .image-containers img {
+            width: 100%;
+            height: 400px;
+            border-radius: 12px;
+            object-fit: cover;
+            position: absolute;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        
+        .image-containers img.active {
+            opacity: 1;
+        }
+    
+
+       /*status section*/
+
+        .stats-section {
+            background-color:white;
+            color: green;
+            text-align: center;
+            padding: 30px 0;
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+        }
+
+        .stat-box {
+            text-align: center;
+        }
+
+        .number {
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        .label {
+            font-size: 16px;
+        }
+        /*rating*/
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 500px;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+
+        select, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            background: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        button:hover {
+            background: darkgreen;
+        }
+
+        /* Pop-up styling */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            text-align: center;
+            width: 250px;
+            color: red;
+        }
+
+        .popup button {
+            background:green;
+            margin-top: 10px;
+        }
+
+        .popup button:hover {
+            background:green;
+        }
+
+    /* Footer */
+    footer {
+      background-color: #28a745;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 10px;
+
+        }
+
+        .social-icons a img {
+            width: 35px;  /* Adjust logo size */
+            height: 35px;
+            transition: transform 0.2s ease-in-out;
+            border-radius: 10px;
+        
+            
+        }
+
+        .social-icons a:hover img {
+            transform: scale(1.2);
+        }
+
+        .privacy {
+            color: #5faa4b;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .privacy a {
+            color: #5faa4b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .privacy a:hover {
+            text-decoration: underline;
+        }
+
+        .initiative {
+            font-weight: bold;
+            font-size: 14px;
+        
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to FreshCrude</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#About">About Us</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#how-it-works">How It Works</a>
+          <li><a href="#Faq">FAQ</a></li>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="slider-container">
+        <div class="slider" id="slider">
+            <img src="1s.png" alt="Farmer 1">
+            <img src="2s.png" alt="Farmer 2">
+            <img src="3ss.png" alt="Farmer 3">
+            <img src="4s.png" alt="Farmer 4">
+            <img src="5s.png" alt="Farmer 5">
+        </div><br>
+      <a href="#products" class="cta-btn">view Now</a>
+    </div>
+  </section>
+  <section id="About" class="about">
+  <h1><center>About-us</center></h1>
+  <div class="container">
+    
+    <div class="image-section">
+   
+        <img src="about.jpg" alt="Farmers Working">
+    </div>
+   
+    <div class="text-section">
+        <h2>Who Are We?</h2>
+        <p>As the creator and developer of LocalFarmers.in, We are responsible for designing
+           and building a seamless platform that connects farmers directly with consumers...</p>
+        <h2>Why Are We?</h2>
+        <p>Eliminates unnecessary intermediaries, allowing farmers to earn more.
+          Buyers can directly see who they are purchasing from, 
+          ensuring authenticity...</p>
+        <h2>Transparency</h2>
+        <p>Every farmer registered on the platform has a verified profile, 
+          showcasing their farm location, type of produce, and farming methods...</p>
+      
+    </div>
+</div>
+
+  <section id="products" class="product-gallery">
+    <h2>Our Products</h2>
+    <div class="products-container">
+      <div class="product-card">
+        <img src="keerai.jpg" >
+        <h3>Organic lettuce</h3>
+        <p>Freshly harvested lettuce grown with natural fertilizers.</p><br>
+        <a href="lettucedata.html" class="cta-btn">view Now</a>
+      </div>
+      <div class="product-card">
+        <img src="ilaneer.jpg" alt="Farm Fresh TendarCoconut">
+        <h3> TendarCoconut</h3>
+        <p>It is a rich source of electrolytes like potassium.</p><br>
+        <a href="ilaneerdata.html" class="cta-btn">view Now</a>
+      </div>
+      <div class="product-card">
+        <img src="maka2.jpg" alt="Pure Honey">
+        <h3>Pure Maize</h3>
+        <p>One of the crucial benefits of sweet corn is weight loss.</p><br>
+        <a href="makkadata.html" class="cta-btn">view Now</a>
+      </div>
+      <div class="product-card">
+        <img src="veg4.jpg" alt="Pure Honey">
+        <h3>Fresh vegetables</h3>
+        <p>Raw, unfiltered vegetables directly from our Farm.</p><br>
+        <a href="vegdata.html" class="cta-btn">view Now</a>
+    </div></div>
+
+
+    <div class="products-container">
+      <div class="product-card">
+        <img src="fruit3.jpg" >
+        <h3>Raw fruits</h3>
+        <p>Freshly harvested fruits grown with natural fertilizers.</p><br>
+        <a href="fruitdata.html" class="cta-btn">view Now</a>
+      </div>
+      <div class="product-card">
+        <img src="seed1.jpg" alt="Farm Fresh Eggs">
+        <h3>Seeds</h3>
+        <p>Seeds protect and nourish the embryo.</p><br>
+        <a href="seeddata.html" class="cta-btn">view Now</a>
+      </div>
+      <div class="product-card">
+        <img src="millet.jpg" alt="Pure Honey">
+        <h3>Pure Millet & Dall</h3>
+        <p>Natural Pure Millets and Dall ”</p><br>
+        <a href="milletdata.html" class="cta-btn">view Now</a>
+      </div>
+      <div class="product-card">
+        <img src="seedling3.jpg" alt="Pure Honey">
+        <h3>Sapling</h3>
+        <p>Natural Sapling.</p><br>
+        <a href="saplingdata.html" class="cta-btn">view Now</a>
+    </div></div>
+    
+    
+  </section>
+
+ 
+    <section id="how-it-works">
+      <h2>HOW IT WORKS</h2>
+      <div class="container">
+          <div class="card">
+              <div class="image-container" style="background-image: url('consumer.png');"></div>
+              <div class="card-content">
+                  <h3>Consumers</h3>
+                  <ul>
+                      <li><i class="fas fa-shopping-cart"></i> Find your favorite products from farmers</li>
+                      <li><i class="fas fa-truck"></i> Receive the products delivered to you</li>
+                      <li><i class="fas fa-star"></i> Review the Product, Farmer & Service</li>
+                  </ul>
+              </div>
+          </div>
+
+          <div class="card">
+              <div class="image-container" style="background-image: url('logo\ \(2\).png');"></div>
+              <div class="card-content">
+                  <h3>Our Website</h3>
+                  <ul>
+                      <li><i class="fas fa-check-circle"></i> Verify Farmers & Products</li>
+                      <li><i class="fas fa-bullhorn"></i> Publish Farmers & Product details</li>
+                      <li><i class="fas fa-box"></i>Your Link to Healthy, Locally Grown Foods!"</li>
+                  </ul>
+              </div>
+          </div>
+          
+
+          <div class="card">
+              <div class="image-container" style="background-image: url('farmer.png');"></div>
+              <div class="card-content">
+                  <h3>Farmers</h3>
+                  <ul>
+                      <li><i class="fas fa-leaf"></i> Produce healthy farm products</li>
+                      <li><i class="fas fa-tags"></i> Publish your product details & prices</li>
+                      <li><i class="fas fa-receipt"></i> Sell the products from customers</li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!--faq-->
+  <section id="Faq"></section>
+  <div class="container">
+    <div class="faq-container">
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-list">
+            <div class="faq-item">
+                <button class="faq-question">How can I buy fresh produce from farmers? <span class="faq-icon">+</span></button>
+                <div class="faq-answer"><p>You can browse and buy directly fresh produce from our farmers here:  <a href="#products">Visit Shop</a></p></div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">How can I register as a farmer? <span class="faq-icon">+</span></button>
+                <div class="faq-answer"><p>Register here: <a href="#contact">Contact Admin</a></p></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">How do I contact customer support?<span class="faq-icon">+</span></button>
+                <div class="faq-answer"><p>Contact us through our support page. <a href="#contact"> Contact Admin</a></p></div>
+            </div>
+            
+            
+            <div id="more-questions" class="hidden">
+                <div class="faq-item">
+                    <button class="faq-question">Do farmers offer organic certification? <span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><p>Some farmers have organic certifications.  <a href="#contact">Learn More</a></p></div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">Are there seasonal products available? <span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><p>Yes, we offer seasonal products based on availability. 
+                        Check our seasonal produce section for current offerings.<a href="#contact">More Details</a></p></div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">Do you offer bulk purchasing options? <span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><p>Yes, we offer bulk purchasing for businesses and large orders.
+                        You can contact farmers directly or use our bulk order request feature. <a href="#contact">More Details</a></p></div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">Are there any discounts available?<span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><p>Check our offers section for discounts.  <a href="#contact">Learn More</a></p></div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">Do you offer delivery services? <span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><p>No, we are not provide delivery services.<a href="#contact">Learn More</a></p></div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">What payment methods are accepted?  <span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><p>We accept various payment options.<a href="#contact">Learn More</a></p></div>
+                </div>
+                
+                
+            </div>
+        </div>
+
+        <button id="toggle-btn" class="show-more-btn">Show More Questions</button>
+    </div>
+    <div class="image-containers"></div>
+</div>
+
+</section>
+<script>
+  //faq
+  
+    document.addEventListener("DOMContentLoaded", function () {
+        const questions = document.querySelectorAll(".faq-question");
+        const toggleBtn = document.getElementById("toggle-btn");
+        const moreQuestions = document.getElementById("more-questions");
+        const imageContainer = document.querySelector(".image-containers");
+        const images = ["thott11.jpg", "thott22.jpg", "thott33.jpg"];
+        let imgIndex = 0;
+
+        // FAQ Toggle
+        questions.forEach(question => {
+            question.addEventListener("click", function () {
+                const answer = this.nextElementSibling;
+                const icon = this.querySelector(".faq-icon");
+                answer.classList.toggle("show");
+                icon.textContent = answer.classList.contains("show") ? "-" : "+";
+            });
+        });
+
+        // Show More Toggle
+        toggleBtn.addEventListener("click", function () {
+            moreQuestions.classList.toggle("hidden");
+            this.textContent = moreQuestions.classList.contains("hidden") ? "Show More Questions" : "Show Less Questions";
+        });
+
+        // Preload images
+        images.forEach((src, index) => {
+            const img = document.createElement("img");
+            img.src = src;
+            if (index === 0) img.classList.add("active");
+            imageContainer.appendChild(img);
+        });
+
+        const imgElements = document.querySelectorAll(".image-containers img");
+
+        setInterval(() => {
+            imgElements.forEach(img => img.classList.remove("active")); // Hide all
+            imgIndex = (imgIndex + 1) % images.length;
+            imgElements[imgIndex].classList.add("active"); // Show next image
+        }, 3000);
+    });
+</script>
+
+
+  
+    <section id="contact" class="contact">
+      <h2>Contact Us</h2>
+      <p style="color:#bb2c01"> You have any questions or would like to buy any product , feel free to reach out!</p>
+      <h3 style="color:#888121">Admin:</h3> <h3 style="color:#0c5e13">Muthulakshmi.G</h3>
+      <h3 style="color:#788821">Contact:</h3> <h3 style="color:#19660a">7639155195</h3>
+      <h3 style="color:#218838"> E-mail: gmlakshmi2004@gmail.com</h3>
+    </section>
+    <body>
+<center>
+      <form id="feedbackForm">
+          <h2>Rate and Give Feedback</h2>
+  
+          <label for="rating">Rate Us:</label>
+          <select id="rating" name="rating" required>
+              <option value="5">⭐⭐⭐⭐⭐ - Excellent</option>
+              <option value="4">⭐⭐⭐⭐ - Good</option>
+              <option value="3">⭐⭐⭐ - Average</option>
+              <option value="2">⭐⭐ - Poor</option>
+              <option value="1">⭐ - Very Bad</option>
+          </select>
+  
+          <label for="feedback">Your Feedback:</label>
+          <textarea id="feedback" name="feedback" rows="4" required></textarea>
+  
+          <button type="submit">Submit</button>
+      </form>
+  
+      <!-- Pop-up Message -->
+      <div id="popup" class="popup">
+          <p>Thank you for your feedback!
+            Stay tuned for more updates!"</p>
+          <button onclick="closePopup()">OK</button>
+      </div>
+  
+      <script>
+          document.getElementById("feedbackForm").addEventListener("submit", function(event) {
+              event.preventDefault(); // Prevents page reload
+  
+              // Show the pop-up message
+              document.getElementById("popup").style.display = "block";
+          });
+  
+          function closePopup() {
+              document.getElementById("popup").style.display = "none";
+          }
+      </script>
+      </center> 
+    <div>
+    
+    <script>
+    
+
+
+        // Track the number of visitors using localStorage
+        if (!localStorage.getItem( 'visitCount')) {
+            localStorage.setItem('visitCount', 0);
+        }
+        
+        // Increase the visit count by 1 on each page load
+        let visitCount = parseInt(localStorage.getItem('visitCount')) + 1;
+        localStorage.setItem('visitCount', visitCount);
+    
+        // Update the visit count on the page
+        document.getElementById('visitorCount').textContent = visitCount;
+    
+        const stars = document.querySelectorAll('.star');
+        let selectedRating = 0;
+    
+        stars.forEach(star => {
+            star.addEventListener('click', function() {
+                selectedRating = parseInt(star.getAttribute('data-value'));
+                updateStarSelection();
+            });
+        });
+    
+        function updateStarSelection() {
+            stars.forEach(star => {
+                if (parseInt(star.getAttribute('data-value')) <= selectedRating) {
+                    star.classList.add('selected');
+                } else {
+                    star.classList.remove('selected');
+                }
+            });
+        }
+    
+        // Modal Elements
+        const modal = document.getElementById('feedbackModal');
+        const modalMessage = document.getElementById('modalMessage');
+        const closeModal = document.getElementsByClassName('close')[0];
+    
+        // Open Modal
+        function openModal(message) {
+            modal.style.display = "block";
+            modalMessage.textContent = message;
+        }
+    
+        // Close Modal
+        closeModal.onclick = function() {
+            modal.style.display = "none";
+        }
+    
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    
+        document.getElementById('ratingForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+    
+            const feedbackText = document.getElementById('feedback').value.trim();
+            
+            if (selectedRating === 0 || feedbackText === "") {
+                openModal("Thank you for visiting our Farmer Consumer platform! Stay tuned for more updates.");
+            } else {
+                const message = `Thank you for your feedback!`;
+                openModal(message);
+            }
+        });
+        //FQA
+       
+        
+        
+    </script></div>
+
+    
+<div class="stats-section">
+  <div class="stat-box">
+      <div class="number" data-target="3241">0</div>
+      <div class="label">Active Users</div>
+  </div>
+  <div class="stat-box">
+      <div class="number" data-target="138">0</div>
+      <div class="label">Farmer Brands</div>
+  </div>
+  <div class="stat-box">
+      <div class="number" data-target="2740">0</div>
+      <div class="label">Total Products</div>
+  </div>
+</div>
+    </center>
+    
+
+  <footer>
+    <div class="footer">
+      <div class="social-icons">
+          <a href="#"><img src="fp.png" alt="Facebook"></a>
+          <a href="#"><img src="insta.jpg" alt="Instagram"></a>
+          <a href="#"><img src="ytube.png" alt="YouTube"></a>
+          <a href="#"><img src="linkin.png" alt="LinkedIn"></a>
+          <a href="#"><img src="wp.jpg" alt="WhatsApp"></a>
+      </div>
+
+     
+  </div>
+    <p>&copy; 2025 Farm Fresh Products | All Rights Reserved</p>
+  </footer>
+  <script>
+    const slider = document.getElementById("slider");
+    let index = 0;
+    function moveSlider() {
+        index++;
+        if (index >= slider.children.length) {
+            index = 0;
+        }
+        slider.style.transform = `translateX(-${index * 100}%)`;
+    }
+    setInterval(moveSlider, 3000);
+</script>
+<script>
+    function animateCounters() {
+            const counters = document.querySelectorAll('.number');
+            const speed = 100; // Adjust speed for animation
+
+            counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText.replace("+", "");
+                    const increment = target / speed;
+
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + increment) + "+";
+                        setTimeout(updateCount, 20);
+                    } else {
+                        counter.innerText = target + "+";
+                    }
+                };
+
+                updateCount();
+            });
+        }
+
+        window.onload = animateCounters;
+</script></body>
+</html>

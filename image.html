@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Zoom on Hover</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            width: 300px;
+            height: 300px;
+            padding: 10px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        .image-container img {
+            width: 100px;
+            height: 100px;
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+            position: absolute;
+        }
+        .image-container img:hover {
+            transform: scale(1.5);
+            z-index: 10;
+        }
+        .image-container img:nth-child(1) { top: 10px; left: 10px; }
+        .image-container img:nth-child(2) { top: 50px; left: 50px; }
+        .image-container img:nth-child(3) { top: 90px; left: 90px; }
+        .image-container img:nth-child(4) { top: 130px; left: 130px; }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="https://via.placeholder.com/100" alt="Image 1">
+        <img src="https://via.placeholder.com/100" alt="Image 2">
+        <img src="https://via.placeholder.com/100" alt="Image 3">
+        <img src="https://via.placeholder.com/100" alt="Image 4">
+    </div>
+</body>
+</html>
